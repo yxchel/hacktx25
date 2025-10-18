@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toyota Stellar Finance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #020617; /* slate-950 */
+        background-image: 
+          radial-gradient(circle at 15% 35%, rgba(127, 29, 29, 0.3), transparent 30%), /* Red nebula */
+          radial-gradient(circle at 85% 65%, rgba(30, 58, 138, 0.4), transparent 40%), /* Blue nebula */
+          radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.2), transparent 50%); /* Indigo center */
+      }
+      .starry-bg {
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InRyYW5zcGFyZW50Ij48L3JlY3Q+PGNpcmNsZSBjeD0iMTAiIGN5PSIzIiByPSIxIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC41Ij48L2NpcmNsZT48Y2lyY2xlIGN4PSIyIiBjeT0iNyIgcj0iMC41IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC44Ij48L2NpcmNsZT48Y2lyY2xlIGN4PSI4IiBjeT0iOCIgcj0iMC44IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC4zIj48L2NpcmNsZT48L3N2Zz4=');
+        background-repeat: repeat;
+        animation: stars 60s linear infinite;
+      }
+      @keyframes stars {
+        from { background-position: 0 0; }
+        to { background-position: 1000px 500px; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.25.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
