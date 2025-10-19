@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toyota Stellar Finance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #020617; /* slate-950 */
+        /* A more complex gradient to simulate a galaxy */
+        background-image: 
+          /* Galactic core glow */
+          radial-gradient(ellipse at 50% 50%, hsla(0, 0%, 100%, 0.1) 0%, transparent 40%),
+          /* Main galaxy dust cloud, wider than it is tall */
+          radial-gradient(ellipse 80% 50% at 50% 50%, hsla(220, 60%, 50%, 0.3) 0%, transparent 60%),
+          /* A secondary, purple nebula */
+          radial-gradient(ellipse at 80% 20%, hsla(280, 40%, 50%, 0.3) 0%, transparent 50%),
+          /* A third, reddish nebula */
+          radial-gradient(ellipse at 20% 80%, hsla(0, 40%, 50%, 0.25) 0%, transparent 50%);
+        background-attachment: fixed; /* Makes the galaxy feel vast and stationary */
+        height: 100%;
+        overflow: hidden; /* Prevents scrollbars on the body */
+      }
+      #root {
+        height: 100vh;
+        overflow-y: auto; /* Allow scrolling on the root div instead of body */
+      }
+      .starry-bg {
+        /* Multi-layered starfield for parallax effect */
+        background-image: 
+          url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIwLjUiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjgiLz48Y2lyY2xlIGN4PSIxMCIgY3k9IjkwIiByPSIwLjMiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjciLz48Y2lyY2xlIGN4PSI4MCIgY3k9IjEwIiByPSIwLjQiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz48L3N2Zz4='), /* Small, distant stars */
+          url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjMwIiByPSIwLjgiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjciLz48Y2lyY2xlIGN4PSI5MCIgY3k9IjYwIiByPSIxIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC42Ii8+PC9zdmc+'), /* Medium stars */
+          url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIxLjUiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjUiLz48L3N2Zz4='); /* Large, close stars */
+        background-repeat: repeat;
+        animation: 
+          move-stars 300s linear infinite,
+          move-stars 200s linear infinite,
+          move-stars 100s linear infinite;
+      }
+      @keyframes move-stars {
+        from { background-position: 0 0; }
+        to { background-position: 1000px 2000px; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.25.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
